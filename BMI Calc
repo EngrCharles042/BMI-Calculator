@@ -1,0 +1,24 @@
+public class Main {
+    public static void main(String[] args) {
+        //A BMI calculator that returns a result
+
+        System.out.println("Enter your weight: ");
+        Scanner sc = new Scanner(System.in);
+        double weight = sc.nextDouble();
+
+        System.out.println("Enter your height: ");
+        double height = sc.nextDouble();
+
+        double result = (weight/(height * height) * 10000);
+        System.out.println(result);
+
+        if(result < 18.5){
+            System.out.println("Your BMI result is " + result + ", you are underweight.");
+        } else if (result >= 18.5 && result <= 24.5) {
+           System.out.println("Your BMI result is " + result + ", you are normal weight.");
+        } else {
+            System.out.println("Your BMI result is " + result + ", you are overweight.");
+        }
+    }
+
+}
